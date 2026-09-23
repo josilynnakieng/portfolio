@@ -4,28 +4,25 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- ★ EDIT PAGE TITLE ★ -->
-<title>Your Name — Graphic Designer / 2026</title>
+<title>Josilynna Kieng — Portfolio / 2026</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Archivo:wght@400;500;700;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
 <style>
-  /* ================================================
-     ★ BLUE-GREY OCEAN PALETTE — cooler, lighter, neutral
-     ================================================ */
   :root {
-    --abyss: #101926;       /* deepest blue-grey (was #020814) */
-    --deep: #1a2a3d;        /* deep blue-grey */
-    --ocean: #2b3e54;       /* main blue-grey */
-    --tide: #465a73;        /* lighter blue-grey */
-    --mist: #8ba3be;        /* misty blue-grey */
-    --foam: #c8d4e0;        /* pale foam */
-    --glow: #a0b8cf;        /* neutral blue-grey highlight (was cyan) */
-    --lumin: #b8c9d9;       /* soft luminous blue-grey */
-    --bone: #e8ecf0;        /* off-white */
-    --coral: #d48a7a;       /* softer coral */
+    --abyss: #1a2a3d;
+    --deep: #243648;
+    --ocean: #354e6a;
+    --tide: #5a7593;
+    --mist: #9db4cc;
+    --foam: #d2dde6;
+    --glow: #b5c8db;
+    --lumin: #c8d6e3;
+    --bone: #eef2f5;
+    --coral: #d8a094;
+    --cream: #e8dfc8;
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -41,42 +38,41 @@
     position: relative;
   }
 
-  /* Static background */
   .ocean-bg {
     position: fixed; inset: 0; z-index: -2;
     background:
-      radial-gradient(ellipse at 20% 0%, rgba(160, 184, 207, 0.18) 0%, transparent 50%),
-      radial-gradient(ellipse at 80% 30%, rgba(184, 201, 217, 0.1) 0%, transparent 55%),
-      radial-gradient(ellipse at 10% 70%, rgba(70, 90, 115, 0.22) 0%, transparent 50%),
-      radial-gradient(ellipse at 90% 90%, rgba(43, 62, 84, 0.3) 0%, transparent 60%),
-      linear-gradient(180deg, #101926 0%, #1a2a3d 40%, #2b3e54 100%);
+      radial-gradient(ellipse 800px 600px at 15% 10%, rgba(232, 223, 200, 0.22) 0%, transparent 60%),
+      radial-gradient(ellipse 700px 500px at 85% 25%, rgba(181, 200, 219, 0.25) 0%, transparent 60%),
+      radial-gradient(ellipse 900px 700px at 70% 65%, rgba(232, 223, 200, 0.18) 0%, transparent 65%),
+      radial-gradient(ellipse 600px 800px at 10% 75%, rgba(157, 180, 204, 0.22) 0%, transparent 60%),
+      radial-gradient(ellipse 700px 500px at 95% 90%, rgba(232, 223, 200, 0.15) 0%, transparent 60%),
+      radial-gradient(ellipse 500px 400px at 40% 40%, rgba(200, 214, 227, 0.12) 0%, transparent 70%),
+      linear-gradient(180deg, #243648 0%, #354e6a 50%, #2a3f5a 100%);
   }
 
-  /* Static grain texture */
   .grain {
     position: fixed; inset: 0; z-index: -1;
     pointer-events: none; opacity: 0.08;
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
   }
 
-  /* Static blobs */
   .blob {
     position: fixed; border-radius: 50%;
-    filter: blur(80px); opacity: 0.28;
+    filter: blur(90px); opacity: 0.32;
     pointer-events: none; z-index: -1;
     mix-blend-mode: screen;
   }
   .blob-1 { width: 600px; height: 600px; background: radial-gradient(circle, var(--mist), transparent 70%); top: -200px; left: -100px; }
-  .blob-2 { width: 500px; height: 500px; background: radial-gradient(circle, var(--tide), transparent 70%); top: 40%; right: -150px; }
-  .blob-3 { width: 700px; height: 700px; background: radial-gradient(circle, var(--glow), transparent 70%); bottom: -200px; left: 20%; opacity: 0.18; }
+  .blob-2 { width: 500px; height: 500px; background: radial-gradient(circle, var(--cream), transparent 70%); top: 35%; right: -120px; opacity: 0.22; }
+  .blob-3 { width: 700px; height: 700px; background: radial-gradient(circle, var(--glow), transparent 70%); bottom: -200px; left: 20%; opacity: 0.22; }
+  .blob-4 { width: 450px; height: 450px; background: radial-gradient(circle, var(--cream), transparent 70%); top: 15%; left: 35%; opacity: 0.18; }
 
   .mono { font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; }
-  .serif { font-family: 'Instrument Serif', serif; }
 
-  /* ============ NAV ============ */
+  /* NAV */
   nav {
     position: fixed; top: 0; left: 0; right: 0;
-    padding: 1.5rem 2rem;
+    padding: 1.25rem 2rem;
     display: flex; justify-content: space-between; align-items: center;
     z-index: 100;
     backdrop-filter: blur(20px);
@@ -89,30 +85,27 @@
     font-size: 1.5rem;
     color: var(--foam);
   }
-  nav ul { display: flex; gap: 2rem; list-style: none; }
+  nav ul { display: flex; gap: 1.75rem; list-style: none; }
   nav a {
     color: var(--foam); text-decoration: none;
     font-family: 'JetBrains Mono', monospace;
-    font-size: 0.72rem; text-transform: uppercase;
+    font-size: 0.7rem; text-transform: uppercase;
     letter-spacing: 0.12em; opacity: 0.75;
   }
   nav a:hover { opacity: 1; color: var(--glow); }
 
-  /* ============ HERO WITH PINNED COLLAGE ============ */
+  /* HERO */
   .hero {
     min-height: 100vh;
     padding: 7rem 2rem 4rem;
     position: relative;
   }
-
   .hero-meta {
     display: flex; justify-content: space-between;
     color: var(--foam); opacity: 0.55;
     gap: 1rem; flex-wrap: wrap;
     margin-bottom: 2rem;
   }
-
-  /* Hero grid: title on left, collage on right */
   .hero-body {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -120,9 +113,7 @@
     align-items: center;
     min-height: 600px;
   }
-
   .hero-title-wrap { position: relative; }
-
   .title-echo {
     position: absolute; top: -40px; left: -20px;
     font-family: 'Instrument Serif', serif; font-style: italic;
@@ -132,7 +123,6 @@
     white-space: nowrap; pointer-events: none;
     z-index: 0; letter-spacing: -0.05em;
   }
-
   .hero-title {
     font-family: 'Archivo', sans-serif; font-weight: 900;
     font-size: clamp(3rem, 8vw, 7rem);
@@ -145,10 +135,10 @@
     font-style: italic; font-weight: 400;
     color: var(--foam); text-transform: none;
     letter-spacing: -0.02em;
+    font-size: 0.85em;
   }
   .hero-title .outline { -webkit-text-stroke: 2px var(--foam); color: transparent; }
   .hero-title .glow { color: var(--glow); text-shadow: 0 0 40px rgba(160, 184, 207, 0.5); }
-
   .hero-sub {
     max-width: 460px; font-size: 1.05rem;
     line-height: 1.55; color: var(--foam);
@@ -160,20 +150,13 @@
     font-style: italic; color: var(--lumin);
     font-size: 1.15rem;
   }
-
   .hero-tags {
     display: flex; flex-wrap: wrap; gap: 0.5rem;
     margin-top: 2rem;
   }
 
-  /* ============ PINNED COLLAGE ============ */
-  /* The overlapping rotated images that feel like a moodboard */
-  .collage {
-    position: relative;
-    height: 560px;
-    width: 100%;
-  }
-
+  /* COLLAGE */
+  .collage { position: relative; height: 560px; width: 100%; }
   .collage-item {
     position: absolute;
     background: var(--deep);
@@ -188,12 +171,9 @@
     z-index: 20;
   }
   .collage-item img {
-    width: 100%; height: 100%;
-    object-fit: cover;
+    width: 100%; height: 100%; object-fit: cover;
     filter: grayscale(0.25) brightness(0.95) contrast(0.95);
   }
-
-  /* The "tape" piece at the top of each pinned image */
   .collage-item .tape {
     position: absolute;
     top: -10px; left: 50%;
@@ -204,8 +184,6 @@
     border: 1px dashed rgba(255,255,255,0.35);
     z-index: 2;
   }
-
-  /* Small caption tag at bottom of each image */
   .collage-item .caption {
     position: absolute;
     bottom: 8px; left: 8px;
@@ -218,32 +196,20 @@
     letter-spacing: 0.1em;
     text-transform: uppercase;
   }
+  .col-1 { top: 0; left: 5%; width: 210px; height: 270px; transform: rotate(-5deg); z-index: 1; }
+  .col-2 { top: 60px; left: 30%; width: 240px; height: 310px; transform: rotate(4deg); z-index: 3; }
+  .col-3 { top: 20px; right: 5%; width: 200px; height: 250px; transform: rotate(-3deg); z-index: 2; }
+  .col-4 { bottom: 40px; left: 10%; width: 220px; height: 260px; transform: rotate(3deg); z-index: 2; }
+  .col-5 { bottom: 0; right: 15%; width: 200px; height: 240px; transform: rotate(-4deg); z-index: 4; }
 
-  /* ★ COLLAGE POSITIONS — edit width/height/top/left/rotate to rearrange */
-  .col-1 { top: 0;     left: 5%;   width: 210px; height: 270px; transform: rotate(-5deg); z-index: 1; }
-  .col-2 { top: 60px;  left: 30%;  width: 240px; height: 310px; transform: rotate(4deg);  z-index: 3; }
-  .col-3 { top: 20px;  right: 5%;  width: 200px; height: 250px; transform: rotate(-3deg); z-index: 2; }
-  .col-4 { bottom: 40px; left: 10%;  width: 220px; height: 260px; transform: rotate(3deg);  z-index: 2; }
-  .col-5 { bottom: 0;   right: 15%; width: 200px; height: 240px; transform: rotate(-4deg); z-index: 4; }
-
-  /* Crosshair marks like a film contact sheet */
-  .crosshair {
-    position: absolute;
-    width: 22px; height: 22px;
-    opacity: 0.6; z-index: 5;
-    pointer-events: none;
-  }
-  .crosshair::before, .crosshair::after {
-    content: '';
-    position: absolute;
-    background: var(--bone);
-  }
+  .crosshair { position: absolute; width: 22px; height: 22px; opacity: 0.6; z-index: 5; pointer-events: none; }
+  .crosshair::before, .crosshair::after { content: ''; position: absolute; background: var(--bone); }
   .crosshair::before { top: 50%; left: 0; right: 0; height: 1px; }
   .crosshair::after { left: 50%; top: 0; bottom: 0; width: 1px; }
   .ch-1 { top: 8%; left: 22%; }
   .ch-2 { top: 55%; right: 30%; }
 
-  /* ============ PILL CAPSULE TAGS ============ */
+  /* PILLS */
   .pill {
     display: inline-flex; align-items: center;
     gap: 0.5rem;
@@ -275,7 +241,7 @@
     box-shadow: inset 0 0 0 1px rgba(16, 25, 38, 0.5);
   }
 
-  /* ============ STATIC BANNER ============ */
+  /* BANNER */
   .banner {
     border-top: 1px solid rgba(200, 212, 224, 0.15);
     border-bottom: 1px solid rgba(200, 212, 224, 0.15);
@@ -291,17 +257,18 @@
   .banner span::after { content: '◌'; color: var(--glow); font-style: normal; font-size: 1rem; }
   .banner span:last-child::after { display: none; }
 
-  /* ============ ABOUT ============ */
-  .about {
+  /* SECTIONS */
+  .section {
     padding: 6rem 2rem 4rem;
     max-width: 1400px; margin: 0 auto;
     position: relative;
   }
+  .section-divider { border-top: 1px solid rgba(200, 212, 224, 0.15); }
 
   .section-label {
     display: flex; align-items: flex-start; gap: 0.75rem;
     color: var(--foam);
-    margin-bottom: 3rem;
+    margin-bottom: 1.5rem;
   }
   .section-label .num { color: var(--glow); }
   .section-label .dash {
@@ -310,7 +277,37 @@
     vertical-align: middle;
   }
 
-  /* ============ ABOUT INTRO WITH HEADSHOT ============ */
+  .section-heading {
+    font-family: 'Archivo', sans-serif;
+    font-weight: 900;
+    font-size: clamp(2.5rem, 6vw, 5rem);
+    letter-spacing: -0.04em;
+    line-height: 0.95;
+    text-transform: uppercase;
+    color: var(--bone);
+    margin-bottom: 1rem;
+  }
+  .section-heading .italic {
+    font-family: 'Instrument Serif', serif;
+    font-weight: 400;
+    font-style: italic;
+    color: var(--glow);
+    text-transform: none;
+  }
+  .section-intro {
+    max-width: 600px;
+    color: var(--foam);
+    opacity: 0.85;
+    font-size: 1.05rem;
+    margin-bottom: 4rem;
+  }
+  .section-intro em {
+    font-family: 'Instrument Serif', serif;
+    font-style: italic;
+    color: var(--lumin);
+  }
+
+  /* ABOUT */
   .about-intro {
     display: grid;
     grid-template-columns: 0.7fr 1.5fr;
@@ -318,49 +315,40 @@
     align-items: center;
     margin-bottom: 6rem;
   }
-
-  /* ★ HEADSHOT FRAME — tilted polaroid style */
   .headshot {
     position: relative;
     aspect-ratio: 3/4;
     max-width: 340px;
     background: var(--bone);
-    padding: 14px 14px 50px;  /* top/sides smaller, bottom larger for polaroid caption */
+    padding: 8px 8px 28px;
     transform: rotate(-3deg);
     box-shadow: 0 15px 45px rgba(0, 0, 0, 0.5);
     transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
   }
-  .headshot:hover {
-    transform: rotate(0deg) scale(1.02);
-  }
+  .headshot:hover { transform: rotate(0deg) scale(1.02); }
   .headshot .photo-wrap {
-    width: 100%;
-    height: 100%;
-    background: var(--deep);
-    overflow: hidden;
-    position: relative;
+    width: 100%; height: 100%;
+    background: var(--deep); overflow: hidden; position: relative;
   }
   .headshot img {
-    width: 100%; height: 100%;
-    object-fit: cover;
+    width: 100%; height: 100%; object-fit: cover;
     filter: grayscale(0.3) brightness(0.95) contrast(0.95);
   }
-  /* The polaroid handwritten-style caption */
   .headshot .polaroid-caption {
     position: absolute;
-    bottom: 10px; left: 0; right: 0;
+    bottom: 6px; left: 0; right: 0;
     text-align: center;
     font-family: 'Instrument Serif', serif;
     font-style: italic;
-    font-size: 1.4rem;
+    font-size: 1rem;
     color: var(--abyss);
+    line-height: 1;
   }
-  /* Corner tape accent */
   .headshot::before {
     content: '';
     position: absolute;
-    top: -14px; left: 20px;
-    width: 80px; height: 26px;
+    top: -10px; left: 18px;
+    width: 60px; height: 20px;
     background: rgba(200, 212, 224, 0.5);
     border: 1px dashed rgba(100, 120, 140, 0.4);
     transform: rotate(-4deg);
@@ -376,27 +364,24 @@
     color: var(--bone);
   }
   .about-text .accent { font-style: italic; color: var(--glow); }
-  .about-text .coral { font-style: italic; color: var(--coral); }
+  .about-text .coral { font-style: italic; color: var(--cream); }
 
-  /* ============ RESUME GRID ============ */
   .resume-grid {
     display: grid;
     grid-template-columns: 1.3fr 1fr 1fr;
     gap: 4rem;
     align-items: start;
   }
-
   .res-col .res-heading {
     font-family: 'Instrument Serif', serif;
     font-style: italic;
-    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-size: clamp(2rem, 4vw, 3rem);
     color: var(--glow);
     line-height: 1;
     letter-spacing: -0.02em;
     margin-bottom: 2rem;
     text-shadow: 0 0 30px rgba(160, 184, 207, 0.25);
   }
-
   .entry {
     padding: 1rem 0;
     border-bottom: 1px dashed rgba(200, 212, 224, 0.2);
@@ -416,7 +401,6 @@
     font-size: 1rem;
     color: var(--bone);
     margin-bottom: 0.2rem;
-    letter-spacing: 0.01em;
   }
   .entry .where {
     font-family: 'Instrument Serif', serif;
@@ -425,25 +409,17 @@
     color: var(--foam);
     opacity: 0.85;
   }
-
   .pill-stack {
-    display: flex;
-    flex-direction: column;
-    gap: 0.6rem;
-    align-items: flex-start;
+    display: flex; flex-direction: column;
+    gap: 0.6rem; align-items: flex-start;
   }
   .pill-row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.6rem;
-    margin-bottom: 0.5rem;
+    display: flex; flex-wrap: wrap;
+    gap: 0.6rem; margin-bottom: 0.5rem;
   }
-
   .software-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 0.75rem;
-    max-width: 280px;
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 0.75rem; max-width: 280px;
   }
   .sw-tile {
     aspect-ratio: 1;
@@ -475,7 +451,6 @@
     text-transform: uppercase;
     opacity: 0.8;
   }
-
   .sub-heading {
     font-family: 'JetBrains Mono', monospace;
     font-size: 0.65rem;
@@ -488,90 +463,742 @@
   }
   .sub-heading:first-child { margin-top: 0; }
 
-  /* ============ WORK ============ */
-  .work {
-    padding: 6rem 0 4rem;
-    border-top: 1px solid rgba(200, 212, 224, 0.15);
+  /* TABS shared */
+  .tabs {
+    display: flex; gap: 0;
+    margin-bottom: 0;
+    border-bottom: 1px solid rgba(200, 212, 224, 0.2);
+    overflow-x: auto;
+    scrollbar-width: thin;
   }
-  .work-header {
-    padding: 0 2rem 5rem;
-    display: flex; justify-content: space-between; align-items: flex-end;
-    gap: 2rem;
-    max-width: 1400px; margin: 0 auto;
-  }
-  .work-header h2 {
-    font-family: 'Archivo', sans-serif; font-weight: 900;
-    font-size: clamp(2.5rem, 7vw, 6rem);
-    letter-spacing: -0.04em; line-height: 0.95;
-    text-transform: uppercase; color: var(--bone);
-  }
-  .work-header h2 .italic {
-    font-family: 'Instrument Serif', serif; font-weight: 400;
-    font-style: italic; color: var(--glow); text-transform: none;
-  }
-
-  .work-grid {
-    padding: 0 2rem;
-    max-width: 1400px; margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
-  }
-
-  .card {
-    position: relative;
-    aspect-ratio: 4/5;
-    background: var(--deep);
-    border: 2px solid var(--foam);
-    overflow: hidden;
-    cursor: pointer;
-    text-decoration: none;
-    color: inherit;
-    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-  }
-  .card:hover { transform: translateY(-4px); z-index: 5; }
-  .card img {
-    width: 100%; height: 100%; object-fit: cover;
-    filter: grayscale(0.2) brightness(0.93) contrast(0.95);
-    transition: filter 0.5s;
-  }
-  .card:hover img { filter: none; }
-  .card .meta {
-    position: absolute;
-    top: 12px; left: 12px;
+  .tab {
+    background: none; border: none;
+    padding: 1.25rem 2rem;
     font-family: 'JetBrains Mono', monospace;
-    font-size: 9px;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--foam);
+    opacity: 0.55;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s;
+    white-space: nowrap;
+    margin-bottom: -1px;
+  }
+  .tab:hover { opacity: 0.85; color: var(--lumin); }
+  .tab.active {
+    opacity: 1;
+    color: var(--glow);
+    border-bottom-color: var(--glow);
+  }
+  .tab .tab-num { color: var(--glow); margin-right: 0.5rem; }
+
+  .panels { position: relative; padding-top: 3rem; }
+  .panel { display: none; }
+  .panel.active { display: block; }
+
+  /* SOCIAL PANELS */
+  .social-panel-grid {
+    display: grid;
+    grid-template-columns: 0.7fr 1.3fr;
+    gap: 4rem;
+    align-items: start;
+  }
+
+  .social-phone {
+    position: relative;
+    width: 280px;
+    height: 591px;
+    margin: 0 auto;
+    background: var(--abyss);
+    border: 9px solid var(--bone);
+    border-radius: 38px;
+    overflow: hidden;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.55);
+    transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    flex-shrink: 0;
+  }
+  .social-phone:hover { transform: translateY(-6px); }
+  .social-phone::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 50%;
+    transform: translateX(-50%);
+    width: 50%; height: 22px;
+    background: var(--bone);
+    border-bottom-left-radius: 14px;
+    border-bottom-right-radius: 14px;
+    z-index: 3;
+  }
+  .social-phone img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+  }
+
+  .social-info .social-eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    color: var(--glow);
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    margin-bottom: 1rem;
+  }
+  .social-info h3 {
+    font-family: 'Archivo', sans-serif;
+    font-weight: 900;
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    letter-spacing: -0.03em;
+    line-height: 0.95;
     color: var(--bone);
-    background: rgba(16, 25, 38, 0.75);
-    backdrop-filter: blur(6px);
-    padding: 4px 8px;
-    letter-spacing: 0.1em;
+    margin-bottom: 1rem;
     text-transform: uppercase;
   }
-  .card .title-overlay {
-    position: absolute;
-    bottom: 0; left: 0; right: 0;
-    padding: 2rem 1rem 1rem;
-    background: linear-gradient(transparent, rgba(16, 25, 38, 0.92));
+  .social-info h3 .italic {
+    font-family: 'Instrument Serif', serif;
+    font-style: italic;
+    font-weight: 400;
+    color: var(--glow);
+    text-transform: none;
   }
-  .card .title-overlay h3 {
+  .social-info .social-tagline {
+    font-family: 'Instrument Serif', serif;
+    font-style: italic;
+    font-size: 1.3rem;
+    color: var(--lumin);
+    line-height: 1.4;
+    margin-bottom: 2rem;
+  }
+  .social-meta {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    padding: 1.5rem 0;
+    border-top: 1px dashed rgba(200, 212, 224, 0.2);
+    border-bottom: 1px dashed rgba(200, 212, 224, 0.2);
+  }
+  .social-meta-item .label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--mist);
+    margin-bottom: 0.4rem;
+  }
+  .social-meta-item .value {
+    font-family: 'Archivo', sans-serif;
+    font-weight: 500;
+    font-size: 0.95rem;
+    color: var(--bone);
+  }
+  .social-description {
+    font-family: 'Instrument Serif', serif;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    color: var(--foam);
+    margin-bottom: 1.5rem;
+  }
+  .social-stat-row {
+    display: flex; flex-wrap: wrap;
+    gap: 2rem; margin-top: 1.5rem;
+  }
+  .social-stat .number {
+    font-family: 'Instrument Serif', serif;
+    font-style: italic;
+    font-size: 2.4rem;
+    color: var(--glow);
+    line-height: 1;
+    text-shadow: 0 0 20px rgba(160, 184, 207, 0.3);
+  }
+  .social-stat .desc {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.62rem;
+    color: var(--foam);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-top: 0.4rem;
+    opacity: 0.85;
+  }
+  .social-tools {
+    display: flex; flex-wrap: wrap;
+    gap: 0.5rem; margin-top: 1.5rem;
+  }
+
+  /* UX PANELS */
+  .ux-panel-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    gap: 4rem;
+    align-items: start;
+  }
+  .ux-info .ux-eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    color: var(--glow);
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    margin-bottom: 1rem;
+  }
+  .ux-info h3 {
+    font-family: 'Archivo', sans-serif;
+    font-weight: 900;
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    letter-spacing: -0.03em;
+    line-height: 0.95;
+    color: var(--bone);
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+  }
+  .ux-info h3 .italic {
+    font-family: 'Instrument Serif', serif;
+    font-style: italic;
+    font-weight: 400;
+    color: var(--glow);
+    text-transform: none;
+  }
+  .ux-info .ux-tagline {
+    font-family: 'Instrument Serif', serif;
+    font-style: italic;
+    font-size: 1.3rem;
+    color: var(--lumin);
+    line-height: 1.4;
+    margin-bottom: 2rem;
+  }
+  .ux-meta {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    padding: 1.5rem 0;
+    border-top: 1px dashed rgba(200, 212, 224, 0.2);
+    border-bottom: 1px dashed rgba(200, 212, 224, 0.2);
+  }
+  .ux-meta-item .label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--mist);
+    margin-bottom: 0.4rem;
+  }
+  .ux-meta-item .value {
+    font-family: 'Archivo', sans-serif;
+    font-weight: 500;
+    font-size: 0.95rem;
+    color: var(--bone);
+  }
+  .ux-description {
+    font-family: 'Instrument Serif', serif;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    color: var(--foam);
+    margin-bottom: 1.5rem;
+  }
+  .ux-tools {
+    display: flex; flex-wrap: wrap;
+    gap: 0.5rem; margin-bottom: 1.5rem;
+  }
+  .ux-link {
+    display: inline-block;
+    font-family: 'Instrument Serif', serif;
+    font-style: italic;
+    font-size: 1.1rem;
+    color: var(--lumin);
+    text-decoration: none;
+    border-bottom: 1px solid var(--lumin);
+    padding-bottom: 2px;
+    transition: all 0.3s;
+  }
+  .ux-link:hover { color: var(--glow); border-color: var(--glow); }
+  .ux-visual { position: relative; }
+  .browser-frame {
+    background: var(--deep);
+    border: 1px solid rgba(200, 212, 224, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+    transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .browser-frame:hover { transform: translateY(-4px); }
+  .browser-bar {
+    background: var(--ocean);
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-bottom: 1px solid rgba(200, 212, 224, 0.1);
+  }
+  .browser-dot {
+    width: 11px; height: 11px;
+    border-radius: 50%;
+    background: var(--mist);
+    opacity: 0.5;
+  }
+  .browser-bar .url {
+    margin-left: 12px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    color: var(--mist);
+    background: rgba(16, 25, 38, 0.5);
+    padding: 4px 12px;
+    border-radius: 4px;
+    flex: 1;
+    max-width: 300px;
+  }
+  .browser-content {
+    aspect-ratio: 16/10;
+    background: var(--abyss);
+    overflow: hidden;
+    position: relative;
+  }
+  .browser-content img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    filter: grayscale(0.15) brightness(0.95);
+  }
+  .ux-secondary {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+  .ux-secondary-img {
+    aspect-ratio: 4/3;
+    background: var(--deep);
+    border: 1px solid rgba(200, 212, 224, 0.15);
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  .ux-secondary-img img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    filter: grayscale(0.15) brightness(0.95);
+  }
+
+  /* BRANDS */
+  .brands-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+  }
+  .brand-card {
+    background: rgba(43, 62, 84, 0.35);
+    backdrop-filter: blur(10px);
+    border: 1.5px solid rgba(200, 212, 224, 0.2);
+    border-radius: 12px;
+    padding: 2.5rem;
+    transition: all 0.4s;
+    position: relative;
+    overflow: hidden;
+  }
+  .brand-card:hover {
+    border-color: var(--glow);
+    background: rgba(43, 62, 84, 0.55);
+    transform: translateY(-4px);
+  }
+  .brand-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px dashed rgba(200, 212, 224, 0.2);
+    margin-bottom: 1.5rem;
+  }
+  .brand-logo {
+    font-family: 'Archivo', sans-serif;
+    font-weight: 900;
+    font-size: 3rem;
+    color: var(--bone);
+    line-height: 1;
+    letter-spacing: -0.04em;
+    text-transform: lowercase;
+  }
+  .brand-logo .dot { color: var(--glow); }
+  .brand-tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    color: var(--glow);
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    background: rgba(160, 184, 207, 0.15);
+    padding: 5px 10px;
+    border-radius: 999px;
+    border: 1px solid rgba(160, 184, 207, 0.3);
+    white-space: nowrap;
+  }
+  .brand-meta {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-bottom: 1.5rem;
+  }
+  .brand-meta-item .label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.6rem;
+    color: var(--mist);
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    margin-bottom: 0.25rem;
+  }
+  .brand-meta-item .value {
+    font-family: 'Instrument Serif', serif;
+    font-style: italic;
+    font-size: 1rem;
+    color: var(--bone);
+  }
+  .brand-role {
+    font-family: 'Archivo', sans-serif;
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--bone);
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+  }
+  .brand-description {
+    font-family: 'Instrument Serif', serif;
+    font-size: 1.05rem;
+    line-height: 1.5;
+    color: var(--foam);
+    margin-bottom: 1.5rem;
+  }
+  .brand-stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px dashed rgba(200, 212, 224, 0.2);
+  }
+  .brand-stat .number {
+    font-family: 'Instrument Serif', serif;
+    font-style: italic;
+    font-size: 2.2rem;
+    color: var(--glow);
+    line-height: 1;
+    text-shadow: 0 0 20px rgba(160, 184, 207, 0.3);
+  }
+  .brand-stat .desc {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    color: var(--foam);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-top: 0.3rem;
+    opacity: 0.85;
+  }
+
+  /* ============ PACKIT MULTI-PLATFORM VISUAL ============ */
+  .packit-panel-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    align-items: start;
+  }
+  .packit-platforms {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: start;
+  }
+  .packit-phones {
+    display: flex;
+    gap: 1.25rem;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .packit-phones .social-phone {
+    width: 220px;
+    height: 464px;  /* 220 × 19/9 ratio */
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.5);
+  }
+  .packit-phones .social-phone::before { width: 45%; height: 18px; }
+  .packit-phone-wrap {
+    text-align: center;
+  }
+  .packit-phone-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.6rem;
+    color: var(--glow);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-top: 1rem;
+    opacity: 0.9;
+  }
+  .packit-browser-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .packit-browser {
+    background: var(--deep);
+    border: 1px solid rgba(200, 212, 224, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.4);
+    width: 100%;
+    max-width: 480px;
+    transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .packit-browser:hover { transform: translateY(-4px); }
+  .packit-browser-bar {
+    background: var(--ocean);
+    padding: 10px 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-bottom: 1px solid rgba(200, 212, 224, 0.1);
+  }
+  .packit-browser-bar .dot {
+    width: 10px; height: 10px;
+    border-radius: 50%;
+    background: var(--mist);
+    opacity: 0.5;
+  }
+  .packit-browser-bar .url {
+    margin-left: 10px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.6rem;
+    color: var(--mist);
+    background: rgba(16, 25, 38, 0.5);
+    padding: 3px 10px;
+    border-radius: 4px;
+    flex: 1;
+    max-width: 260px;
+  }
+  .packit-browser-content {
+    aspect-ratio: 16/10;
+    background: var(--abyss);
+    overflow: hidden;
+    position: relative;
+  }
+  .packit-browser-content img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    filter: grayscale(0.15) brightness(0.95);
+  }
+
+
+  .hobbies-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 4rem;
+    align-items: start;
+    max-width: 900px;
+  }
+
+  /* --- Nail account side --- */
+  .hobby-block-header {
+    display: flex;
+    align-items: baseline;
+    gap: 0.75rem;
+    margin-bottom: 0.5rem;
+  }
+  .hobby-block-header h3 {
+    font-family: 'Archivo', sans-serif;
+    font-weight: 900;
+    font-size: 2.2rem;
+    color: var(--bone);
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    line-height: 1;
+  }
+  .hobby-block-header h3 .italic {
+    font-family: 'Instrument Serif', serif;
+    font-style: italic;
+    font-weight: 400;
+    color: var(--glow);
+    text-transform: none;
+  }
+  .hobby-handle {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    color: var(--mist);
+    letter-spacing: 0.1em;
+    margin-bottom: 1.5rem;
+    display: inline-block;
+  }
+  .hobby-handle a {
+    color: var(--glow);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(160, 184, 207, 0.4);
+    padding-bottom: 1px;
+    transition: all 0.3s;
+  }
+  .hobby-handle a:hover {
+    color: var(--lumin);
+    border-color: var(--lumin);
+  }
+  .hobby-blurb {
+    font-family: 'Instrument Serif', serif;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    color: var(--foam);
+    margin-bottom: 1.75rem;
+  }
+  .hobby-blurb em {
+    font-style: italic;
+    color: var(--lumin);
+  }
+
+  .nail-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.75rem;
+  }
+  .nail-card {
+    aspect-ratio: 1;
+    background: var(--deep);
+    border: 2px solid var(--bone);
+    overflow: hidden;
+    border-radius: 4px;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    cursor: pointer;
+  }
+  .nail-card:nth-child(odd) { transform: rotate(-1.5deg); }
+  .nail-card:nth-child(even) { transform: rotate(1.5deg); }
+  .nail-card:hover {
+    transform: scale(1.05) rotate(0deg);
+    z-index: 5;
+  }
+  .nail-card img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    filter: grayscale(0.15) brightness(0.97) contrast(0.97);
+    transition: filter 0.4s;
+  }
+  .nail-card:hover img {
+    filter: none;
+  }
+
+  /* --- Wattpad side --- */
+  .stories-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+  .story-card {
+    background: rgba(43, 62, 84, 0.35);
+    backdrop-filter: blur(10px);
+    border: 1.5px solid rgba(200, 212, 224, 0.2);
+    border-radius: 10px;
+    padding: 1.75rem;
+    transition: all 0.4s;
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 1.25rem;
+    align-items: start;
+  }
+  .story-card:hover {
+    border-color: var(--glow);
+    background: rgba(43, 62, 84, 0.55);
+    transform: translateY(-2px);
+  }
+  /* Mini "book cover" graphic on the left */
+  .story-cover {
+    aspect-ratio: 2/3;
+    border-radius: 4px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem;
+    text-align: center;
+  }
+  .story-cover.cover-1 {
+    background: linear-gradient(135deg, #354e6a, #1a2a3d);
+    border: 1px solid rgba(200,212,224,0.25);
+  }
+  .story-cover.cover-2 {
+    background: linear-gradient(135deg, #5a7593, #354e6a);
+    border: 1px solid rgba(200,212,224,0.3);
+  }
+  .story-cover.cover-3 {
+    background: linear-gradient(135deg, #243648, #1a2a3d);
+    border: 1px solid rgba(200,212,224,0.2);
+  }
+  .story-cover .cover-title {
+    font-family: 'Instrument Serif', serif;
+    font-style: italic;
+    color: var(--bone);
+    font-size: 0.7rem;
+    line-height: 1.1;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+  }
+  /* Spine line */
+  .story-cover::after {
+    content: '';
+    position: absolute;
+    left: 6px; top: 0; bottom: 0;
+    width: 1px;
+    background: rgba(255,255,255,0.18);
+  }
+
+  .story-info {
+    min-width: 0;
+  }
+  .story-meta-row {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 0.5rem;
+  }
+  .story-genre {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.6rem;
+    color: var(--glow);
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    background: rgba(160, 184, 207, 0.12);
+    padding: 4px 8px;
+    border-radius: 999px;
+    border: 1px solid rgba(160, 184, 207, 0.3);
+  }
+  .story-status {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.6rem;
+    color: var(--mist);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+  }
+  .story-info h4 {
     font-family: 'Archivo', sans-serif;
     font-weight: 700;
     font-size: 1.15rem;
     color: var(--bone);
-    letter-spacing: 0.02em;
+    margin-bottom: 0.5rem;
     text-transform: uppercase;
+    letter-spacing: 0.02em;
+    line-height: 1.15;
   }
-  .card .title-overlay p {
+  .story-quote {
     font-family: 'Instrument Serif', serif;
     font-style: italic;
     font-size: 1rem;
+    line-height: 1.45;
+    color: var(--foam);
+    padding-left: 0.85rem;
+    border-left: 2px solid var(--glow);
+  }
+  .story-quote::before {
+    content: '"';
     color: var(--glow);
-    line-height: 1.2;
-    margin-top: 3px;
+    font-size: 1.3em;
+    margin-right: 0.1em;
+  }
+  .story-quote::after {
+    content: '"';
+    color: var(--glow);
+    font-size: 1.3em;
+    margin-left: 0.05em;
   }
 
-  /* ============ CONTACT ============ */
+  /* CONTACT */
   .contact {
     padding: 6rem 2rem;
     text-align: center;
@@ -604,7 +1231,6 @@
   .contact a.email:hover {
     color: var(--glow); border-color: var(--glow);
   }
-
   .socials {
     margin-top: 3rem; display: flex; justify-content: center;
     gap: 0.75rem; flex-wrap: wrap;
@@ -625,16 +1251,447 @@
     border-color: var(--glow);
   }
 
+  /* Filled CTA email button — the only one in the socials row now, so give it presence */
+  .socials .email-btn {
+    background: var(--glow);
+    color: var(--abyss);
+    border-color: var(--glow);
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    padding: 1.1rem 2.4rem;
+    box-shadow: 0 8px 25px rgba(160, 184, 207, 0.25);
+  }
+  .socials .email-btn:hover {
+    background: var(--lumin);
+    border-color: var(--lumin);
+    transform: translateY(-2px);
+    box-shadow: 0 12px 35px rgba(160, 184, 207, 0.4);
+  }
+
   footer {
     border-top: 1px solid rgba(200, 212, 224, 0.15);
     padding: 2rem;
-    display: flex; justify-content: space-between;
+    display: flex; justify-content: center;
     font-family: 'JetBrains Mono', monospace;
     font-size: 0.7rem; text-transform: uppercase;
     letter-spacing: 0.1em; color: var(--foam);
     opacity: 0.55; gap: 1rem; flex-wrap: wrap;
   }
 
+  /* ============================================================
+     ★★★ NEW LANDING PAGE — BLUEPRINT HERO + COLLAGE ABOUT ★★★
+     ============================================================ */
+
+  /* ===== BLUEPRINT HERO ===== */
+  .blueprint-hero {
+    margin: 7rem 2rem 0;
+    position: relative;
+    background: linear-gradient(135deg, #1a3458 0%, #2b4870 50%, #1f3d5f 100%);
+    border-radius: 4px;
+    padding: 3.5rem 4rem 4rem 6rem;
+    overflow: hidden;
+    box-shadow: 0 25px 70px rgba(0,0,0,0.45);
+    min-height: 540px;
+  }
+  /* Blueprint grid lines — squares of light blue-white */
+  .blueprint-hero::before {
+    content: '';
+    position: absolute; inset: 0;
+    background-image:
+      linear-gradient(to right, rgba(232,236,240,0.18) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(232,236,240,0.18) 1px, transparent 1px);
+    background-size: 56px 56px;
+    pointer-events: none;
+    z-index: 1;
+  }
+  /* Slight paper-fold/wrinkle texture on top */
+  .blueprint-hero::after {
+    content: '';
+    position: absolute; inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    opacity: 0.07;
+    mix-blend-mode: overlay;
+    pointer-events: none;
+    z-index: 2;
+  }
+
+  /* Vertical ruler on the left */
+  .ruler-y {
+    position: absolute;
+    top: 0; bottom: 0; left: 0;
+    width: 56px;
+    z-index: 3;
+    border-right: 1px solid rgba(232,236,240,0.4);
+    color: rgba(232,236,240,0.85);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    font-weight: 500;
+  }
+  .ruler-y .tick {
+    position: absolute;
+    right: 8px;
+    transform: translateY(-50%);
+    text-align: right;
+  }
+  .ruler-y .tick::after {
+    content: '';
+    position: absolute;
+    right: -10px; top: 50%;
+    width: 5px; height: 1px;
+    background: rgba(232,236,240,0.55);
+  }
+
+  /* Horizontal ruler on the bottom */
+  .ruler-x {
+    position: absolute;
+    left: 0; right: 0; bottom: 0;
+    height: 36px;
+    z-index: 3;
+    border-top: 1px solid rgba(232,236,240,0.4);
+    color: rgba(232,236,240,0.85);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    font-weight: 500;
+  }
+  .ruler-x .tick {
+    position: absolute;
+    top: 14px;
+    transform: translateX(-50%);
+  }
+  .ruler-x .tick::before {
+    content: '';
+    position: absolute;
+    top: -10px; left: 50%;
+    width: 1px; height: 5px;
+    background: rgba(232,236,240,0.55);
+  }
+
+  /* The title cluster */
+  .blueprint-title {
+    position: relative;
+    z-index: 4;
+    color: var(--bone);
+    max-width: 880px;
+  }
+  .bp-eyebrow {
+    font-family: 'Archivo', sans-serif;
+    font-weight: 700;
+    font-size: 1.4rem;
+    letter-spacing: 0.02em;
+    color: var(--bone);
+    margin-bottom: 0.25rem;
+    margin-left: 1.5rem;
+    text-transform: lowercase;
+  }
+  .bp-name {
+    font-family: 'Archivo', sans-serif;
+    font-weight: 900;
+    font-size: clamp(4rem, 10vw, 9rem);
+    color: var(--bone);
+    line-height: 0.88;
+    letter-spacing: -0.05em;
+    text-transform: lowercase;
+  }
+  .bp-portfolio {
+    font-family: 'Yellowtail', cursive;
+    font-size: clamp(3rem, 8vw, 7rem);
+    color: var(--bone);
+    line-height: 0.9;
+    letter-spacing: -0.02em;
+    margin-top: -0.6em;
+    margin-left: 3rem;
+    position: relative;
+    z-index: 5;
+  }
+
+  /* Sticky note */
+  .sticky-note {
+    position: absolute;
+    right: 8%;
+    bottom: 35%;
+    width: 175px;
+    background: var(--bone);
+    color: #2b4870;
+    padding: 1.1rem 1rem 1rem;
+    transform: rotate(7deg);
+    z-index: 6;
+    box-shadow:
+      0 12px 25px rgba(0,0,0,0.35),
+      0 4px 8px rgba(0,0,0,0.2);
+    font-family: 'Caveat', cursive;
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 1.15;
+    text-align: center;
+  }
+  /* Red thumbtack */
+  .sticky-note::before {
+    content: '';
+    position: absolute;
+    top: -6px; left: 50%;
+    transform: translateX(-50%);
+    width: 18px; height: 18px;
+    background: radial-gradient(circle at 35% 35%, #ff8a7a, #d94a3c 60%, #8b2a1c);
+    border-radius: 50%;
+    box-shadow:
+      0 3px 5px rgba(0,0,0,0.5),
+      inset -2px -2px 4px rgba(0,0,0,0.3);
+    z-index: 7;
+  }
+
+  /* ABOUT ME repeating divider */
+  .about-divider {
+    margin: 0 2rem;
+    background: linear-gradient(90deg, #1a3458, #2b4870, #1a3458);
+    color: var(--bone);
+    padding: 0.85rem 0;
+    overflow: hidden;
+    white-space: nowrap;
+    font-family: 'Archivo', sans-serif;
+    font-weight: 900;
+    font-size: 0.95rem;
+    letter-spacing: 0.35em;
+    text-align: center;
+    border-top: 1px solid rgba(232,236,240,0.2);
+    border-bottom: 1px solid rgba(232,236,240,0.2);
+  }
+  .about-divider span { margin: 0 0.7em; }
+
+  /* ===== COLLAGE ABOUT ===== */
+  .collage-about {
+    padding: 5rem 2rem 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    /* Subtle dotted texture like the reference */
+    background-image: radial-gradient(rgba(168, 184, 207, 0.18) 1px, transparent 1.5px);
+    background-size: 14px 14px;
+  }
+
+  .ca-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 4rem;
+    align-items: start;
+    position: relative;
+  }
+
+  .ca-greeting {
+    font-family: 'Archivo', sans-serif;
+    font-weight: 900;
+    font-size: clamp(1.5rem, 2.5vw, 2rem);
+    color: var(--glow);
+    text-transform: lowercase;
+    letter-spacing: -0.01em;
+    margin-bottom: 0.5rem;
+  }
+  .ca-name {
+    font-family: 'Instrument Serif', serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: clamp(3rem, 7vw, 5.5rem);
+    color: var(--glow);
+    line-height: 0.95;
+    letter-spacing: -0.02em;
+    margin-bottom: 2.5rem;
+    text-shadow: 0 0 35px rgba(160, 184, 207, 0.4);
+  }
+
+  .ca-body {
+    font-family: 'Archivo', sans-serif;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: var(--bone);
+    margin-bottom: 2.5rem;
+    max-width: 580px;
+  }
+  .ca-body .school {
+    color: var(--glow);
+    font-weight: 700;
+  }
+
+  .ca-programs-label {
+    font-family: 'Instrument Serif', serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 2.5rem;
+    color: var(--glow);
+    line-height: 1;
+    margin-bottom: 1rem;
+    display: inline-block;
+    letter-spacing: -0.02em;
+  }
+  .ca-programs-star {
+    display: inline-block;
+    margin-left: 0.5rem;
+    color: var(--glow);
+    font-size: 1.5rem;
+    vertical-align: super;
+  }
+  .ca-programs-row {
+    display: flex;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+  }
+  .ca-program-tile {
+    width: 56px; height: 56px;
+    border: 1.5px solid var(--foam);
+    background: rgba(43, 62, 84, 0.45);
+    backdrop-filter: blur(8px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    font-family: 'Archivo', sans-serif;
+    font-weight: 900;
+    font-size: 1.25rem;
+    color: var(--glow);
+    transition: all 0.3s;
+  }
+  .ca-program-tile:hover {
+    border-color: var(--glow);
+    background: rgba(160, 184, 207, 0.18);
+  }
+
+  /* Photo column — star-shaped photo, click me arrow, curving email */
+  .ca-photo-col {
+    position: relative;
+    padding: 1rem;
+    min-height: 500px;
+  }
+
+  /* Halftone star backdrop behind photo */
+  .ca-photo-bg {
+    position: absolute;
+    top: 20px; left: 50%;
+    transform: translateX(-45%);
+    width: 360px;
+    height: 360px;
+    z-index: 1;
+    opacity: 0.5;
+    pointer-events: none;
+  }
+
+  /* The photo itself, clipped into a star/blob shape */
+  .ca-photo {
+    position: relative;
+    width: 280px;
+    height: 320px;
+    margin: 30px auto 0;
+    z-index: 2;
+    overflow: hidden;
+    /* Star-ish blob clip path */
+    -webkit-clip-path: polygon(
+      50% 0%, 60% 18%, 80% 12%, 75% 32%, 95% 35%, 82% 50%,
+      96% 68%, 75% 70%, 80% 90%, 60% 80%, 50% 100%, 40% 80%,
+      20% 90%, 25% 70%, 4% 68%, 18% 50%, 5% 35%, 25% 32%,
+      20% 12%, 40% 18%
+    );
+            clip-path: polygon(
+      50% 0%, 60% 18%, 80% 12%, 75% 32%, 95% 35%, 82% 50%,
+      96% 68%, 75% 70%, 80% 90%, 60% 80%, 50% 100%, 40% 80%,
+      20% 90%, 25% 70%, 4% 68%, 18% 50%, 5% 35%, 25% 32%,
+      20% 12%, 40% 18%
+    );
+  }
+  .ca-photo img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    filter: brightness(0.95) contrast(1.05) saturate(0.9);
+  }
+
+  /* Click Me — moved left, now paired with a PNG slot */
+  .click-me {
+    position: absolute;
+    top: 60px;
+    right: 90px;
+    z-index: 5;
+    transform: rotate(15deg);
+    text-align: center;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  .click-me-text {
+    font-family: 'Instrument Serif', serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 1.9rem;
+    color: var(--glow);
+    line-height: 1;
+    text-shadow: 0 0 12px rgba(160, 184, 207, 0.4);
+    white-space: nowrap;
+  }
+  .click-me svg {
+    display: block;
+    margin-top: 0.3rem;
+  }
+
+  /* PNG slot — sits to the right of the click me / arrow */
+  .me-png {
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    z-index: 6;
+    width: 120px;
+    height: 120px;
+    transform: rotate(-8deg);
+    /* Dashed placeholder frame — replace by adding an <img> */
+    border: 1.5px dashed rgba(160, 184, 207, 0.5);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(43, 62, 84, 0.25);
+    backdrop-filter: blur(4px);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--glow);
+    text-align: center;
+    line-height: 1.3;
+    padding: 8px;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .me-png:hover { transform: rotate(0deg) scale(1.05); }
+  .me-png img {
+    width: 100%; height: 100%;
+    object-fit: contain;
+  }
+
+  /* Curving email */
+  .curving-email {
+    position: absolute;
+    bottom: 40px; right: -20px;
+    z-index: 5;
+    width: 240px;
+    height: 80px;
+  }
+  .curving-email svg { width: 100%; height: 100%; }
+  .curving-email text {
+    font-family: 'Archivo', sans-serif;
+    font-weight: 500;
+    font-size: 13px;
+    letter-spacing: 0.08em;
+    fill: var(--bone);
+  }
+
+  /* ===== Resume grid stays usable, but reduced top spacing since it now follows the about ===== */
+  .ca-resume-wrap {
+    margin-top: 5rem;
+    padding-top: 3rem;
+    border-top: 1px dashed rgba(200, 212, 224, 0.25);
+  }
+
+
+  @media (max-width: 1100px) {
+    .social-panel-grid { grid-template-columns: 1fr; gap: 2.5rem; justify-items: center; }
+    .ux-panel-grid { grid-template-columns: 1fr; gap: 2rem; }
+    .brands-grid { grid-template-columns: 1fr; }
+    .hobbies-grid { grid-template-columns: 1fr; gap: 3.5rem; }
+  }
   @media (max-width: 1000px) {
     .hero-body { grid-template-columns: 1fr; gap: 2rem; min-height: auto; }
     .collage { height: 500px; margin-top: 2rem; }
@@ -645,11 +1702,10 @@
   }
   @media (max-width: 800px) {
     nav { padding: 1rem 1.25rem; }
-    nav ul { gap: 1rem; }
+    nav ul { gap: 0.75rem; }
+    nav .logo { font-size: 1.25rem; }
     .hero { padding: 5rem 1.25rem 2rem; }
-    .about { padding: 4rem 1.25rem 2rem; }
-    .work-header { flex-direction: column; align-items: flex-start; gap: 1rem; padding: 0 1.25rem 3rem; }
-    .work-grid { padding: 0 1.25rem; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+    .section { padding: 4rem 1.25rem 2rem; }
     .contact { padding: 4rem 1.25rem; }
     footer { padding: 1.5rem 1.25rem; flex-direction: column; gap: 0.5rem; }
     .banner { padding: 1rem; font-size: 1.2rem; gap: 1.5rem; }
@@ -660,9 +1716,33 @@
     .col-3 { width: 140px; height: 180px; right: 2%; }
     .col-4 { width: 150px; height: 190px; }
     .col-5 { width: 140px; height: 170px; }
-  }
-  @media (max-width: 500px) {
-    .work-grid { grid-template-columns: 1fr; }
+    .tab { padding: 1rem 1.25rem; font-size: 0.7rem; }
+    .social-meta, .ux-meta { grid-template-columns: 1fr; gap: 1rem; }
+    .social-phone { width: 240px; height: 506px; }
+    .brand-card { padding: 1.75rem; }
+    .brand-stats { grid-template-columns: 1fr; }
+    .ux-info h3, .social-info h3 { font-size: 2rem; }
+    .story-card { grid-template-columns: 60px 1fr; padding: 1.25rem; gap: 1rem; }
+
+    /* New landing page responsive */
+    .blueprint-hero { margin: 5rem 1rem 0; padding: 2.5rem 2rem 3.5rem 4rem; min-height: auto; }
+    .ruler-y { width: 36px; }
+    .ruler-y .tick { font-size: 9px; }
+    .ruler-x { font-size: 9px; }
+    .sticky-note { width: 130px; right: 5%; bottom: 8%; font-size: 0.85rem; padding: 0.85rem 0.75rem; }
+    .bp-portfolio { margin-left: 1.5rem; }
+    .about-divider { margin: 0 1rem; font-size: 0.75rem; letter-spacing: 0.25em; }
+    .collage-about { padding: 3rem 1.25rem 2rem; }
+    .ca-grid { grid-template-columns: 1fr; gap: 2rem; }
+    .ca-photo-col { min-height: auto; padding: 0 0 4rem; }
+    .ca-photo { width: 220px; height: 250px; }
+    .ca-photo-bg { width: 280px; height: 280px; }
+    .click-me { right: 55%; top: 30px; }
+    .me-png { right: 15%; top: 10px; width: 90px; height: 90px; }
+    .curving-email { right: 5%; }
+    /* PackIt responsive */
+    .packit-platforms { grid-template-columns: 1fr; }
+    .packit-phones .social-phone { width: 180px; height: 380px; }
   }
 </style>
 </head>
@@ -673,325 +1753,1101 @@
 <div class="blob blob-1"></div>
 <div class="blob blob-2"></div>
 <div class="blob blob-3"></div>
+<div class="blob blob-4"></div>
 
 <nav>
-  <div class="logo">y/n</div>
+  <div class="logo">josilynna</div>
   <ul>
-    <li><a href="#work">Work</a></li>
     <li><a href="#about">About</a></li>
+    <li><a href="#digital">Digital Media</a></li>
+    <li><a href="#ux">UX</a></li>
+    <li><a href="#brands">Brands</a></li>
+    <li><a href="#hobbies">Hobbies</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
 </nav>
 
-<!-- ========== HERO WITH PINNED COLLAGE ========== -->
+<!-- ========== HERO ========== -->
+<!-- ========== HERO ========== -->
 <section class="hero">
   <div class="hero-meta mono">
-    <span>[ Portfolio — MMXXVI ]</span>
-    <span>Lat. 34.4°N / Long. 119.8°W</span>
-    <span>◉ Open for commissions</span>
+    <span>[ Portfolio — 2026 ]</span>
+    <span>Goleta, CA</span>
   </div>
 
   <div class="hero-body">
 
-    <!-- LEFT: Title + intro -->
     <div class="hero-title-wrap">
       <div class="title-echo">design</div>
       <h1 class="hero-title">
-        Sub—<br>
-        <span class="italic">mersion</span><br>
-        <span class="outline">into</span> <span class="glow">form</span>.
+        <span class="italic">Welcome to</span><br>
+        <span class="italic">Josilynna's</span> <span class="glow">portfolio</span>.
       </h1>
       <p class="hero-sub">
-        I'm <em>Your Name</em> — a graphic designer working the edges where
-        <em>social</em>, <em>editorial</em>, and <em>image</em> meet.
-        Based on the California coast, reachable from anywhere with a tide.
+        Communication student at <em>UCSB</em> working at the intersection of
+        <em>social media marketing</em>, <em>brand engagement</em>, <em>PR</em>,
+        <em>partnerships</em>, and <em>digital media</em>. Brand &amp; SMM Intern
+        @ <em>Decamarx</em>, assisting efforts @packitcool @bigbarkerusa @jollypets.
       </p>
       <div class="hero-tags">
-        <span class="pill">Brand Identity</span>
-        <span class="pill">Editorial</span>
-        <span class="pill">Social Media</span>
-        <span class="pill">Art Direction</span>
+        <span class="pill">Social Media Marketing</span>
+        <span class="pill">Brand Engagement</span>
+        <span class="pill">PR</span>
+        <span class="pill">Partnerships</span>
+        <span class="pill">Digital Media</span>
+        <span class="pill">UI / UX</span>
+        <span class="pill">Content Development</span>
       </div>
     </div>
 
-    <!-- =====================================================
-         ★ RIGHT: PINNED COLLAGE — swap image URLs here
-         Each .collage-item is one pinned "photo" on the moodboard.
-         To change position/rotation, edit the .col-1 through .col-5
-         classes in the CSS above.
-         ===================================================== -->
     <div class="collage">
       <span class="crosshair ch-1"></span>
       <span class="crosshair ch-2"></span>
 
       <div class="collage-item col-1">
         <div class="tape"></div>
-        <img src="https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=600" alt="">
-        <span class="caption">featured · 01</span>
+        <img src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=600" alt="">
+        <span class="caption">ditto · 2026</span>
       </div>
       <div class="collage-item col-2">
         <div class="tape"></div>
-        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=700" alt="">
-        <span class="caption">recent · 2025</span>
+        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=700" alt="">
+        <span class="caption">ucsb pa · 2025</span>
       </div>
       <div class="collage-item col-3">
         <div class="tape"></div>
-        <img src="https://images.unsplash.com/photo-1439066615861-d1af74d74000?w=600" alt="">
-        <span class="caption">series · 03</span>
+        <img src="https://images.unsplash.com/photo-1551836022-deb4988cc6c0?w=600" alt="">
+        <span class="caption">liner · 2024</span>
       </div>
       <div class="collage-item col-4">
         <div class="tape"></div>
-        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600" alt="">
-        <span class="caption">study · 04</span>
+        <img src="https://images.unsplash.com/photo-1611605698335-8b1569810432?w=600" alt="">
+        <span class="caption">delta sig pi</span>
       </div>
       <div class="collage-item col-5">
         <div class="tape"></div>
-        <img src="https://images.unsplash.com/photo-1505142468610-359e7d316be0?w=600" alt="">
-        <span class="caption">print · 05</span>
+        <img src="https://images.unsplash.com/photo-1587613864521-9ef8dfe617cc?w=600" alt="">
+        <span class="caption">fizz · 2024</span>
       </div>
     </div>
 
   </div>
 </section>
 
-<!-- ========== STATIC BANNER ========== -->
 <div class="banner">
-  <span>Brand Systems</span>
-  <span>Editorial Design</span>
-  <span>Social Campaigns</span>
-  <span>Digital Collage</span>
-  <span>Print Matter</span>
+  <span>Social Media</span>
+  <span>UX Design</span>
+  <span>Brand Strategy</span>
+  <span>Digital Creation</span>
+  <span>Content Development</span>
 </div>
 
-<!-- =====================================================
-     ★ ABOUT + HEADSHOT + RESUME
-     ===================================================== -->
-<section class="about" id="about">
+<!-- ========== COLLAGE ABOUT ========== -->
+<section class="collage-about" id="about">
+  <div class="ca-grid">
+
+    <!-- LEFT: greeting + name + body + programs -->
+    <div>
+      <div class="ca-greeting">Hi, my name is</div>
+      <div class="ca-name">Josilynna Kieng</div>
+
+      <p class="ca-body">
+        &amp; I bring my, yours, and the company's fleeting thoughts into reality.
+        I'm a current fourth-year student at the
+        <span class="school">University of California, Santa Barbara</span>
+        majoring in Communication with an estimated graduation date of 06/2027.
+        Digital marketing has always served as a creative outlet for me to connect
+        communities with organizations.
+      </p>
+
+      <div class="ca-programs-label">Programs<span class="ca-programs-star">✦</span></div>
+      <div class="ca-programs-row">
+        <div class="ca-program-tile">Ps</div>
+        <div class="ca-program-tile">Fg</div>
+        <div class="ca-program-tile">Ai</div>
+        <div class="ca-program-tile">Cv</div>
+        <div class="ca-program-tile">Fc</div>
+        <div class="ca-program-tile">Lt</div>
+      </div>
+    </div>
+
+    <!-- RIGHT: photo with halftone star, click me, curving email -->
+    <div class="ca-photo-col">
+
+      <!-- Halftone star backdrop SVG -->
+      <svg class="ca-photo-bg" viewBox="0 0 360 360" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <pattern id="halftone" x="0" y="0" width="10" height="10" patternUnits="userSpaceOnUse">
+            <circle cx="5" cy="5" r="2" fill="#a0b8cf"/>
+          </pattern>
+          <mask id="starmask">
+            <rect width="360" height="360" fill="black"/>
+            <polygon fill="white" points="
+              180,5 215,120 335,120 240,190 275,310 180,235
+              85,310 120,190 25,120 145,120
+            "/>
+          </mask>
+        </defs>
+        <rect width="360" height="360" fill="url(#halftone)" mask="url(#starmask)"/>
+      </svg>
+
+      <!-- The actual photo, clipped into a star/blob shape -->
+      <div class="ca-photo">
+        <img src="images/headshot.jpg" alt="Josilynna Kieng">
+      </div>
+
+      <!-- Click Me arrow (points to the PNG slot to the right) -->
+      <div class="click-me">
+        <div class="click-me-text">me!</div>
+        <svg width="60" height="55" viewBox="0 0 60 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M 5 5 Q 20 30, 40 30 Q 48 30, 55 25"
+                stroke="#a0b8cf" stroke-width="2" stroke-linecap="round" fill="none"/>
+          <path d="M 48 20 L 56 25 L 49 30"
+                stroke="#a0b8cf" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        </svg>
+      </div>
+
+      <!-- PNG slot for a cutout of you (replace inner text with an <img> when ready) -->
+      <div class="me-png">
+        <!-- ★ Replace this whole div's contents with: <img src="images/me-cutout.png" alt="Me"> -->
+        add png<br>of you here
+      </div>
+
+      <!-- Curving email along an arc -->
+      <div class="curving-email">
+        <svg viewBox="0 0 240 80" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <path id="emailcurve" d="M 10 20 Q 120 90, 230 30" fill="none"/>
+          </defs>
+          <text>
+            <textPath href="#emailcurve" startOffset="0">josilynnakieng@gmail.com</textPath>
+          </text>
+        </svg>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Resume grid kept underneath, wrapped to give breathing room -->
+  <div class="ca-resume-wrap">
+    <div class="resume-grid">
+      <div class="res-col">
+        <h3 class="res-heading">education</h3>
+        <div>
+          <div class="entry">
+            <div class="when">2023 — June 2027</div>
+            <div class="what">B.A. Communication</div>
+            <div class="where">University of California, Santa Barbara</div>
+          </div>
+        </div>
+
+        <h3 class="res-heading" style="margin-top: 3rem;">experience</h3>
+        <div>
+          <div class="entry">
+            <div class="when">Aug 2026 — Current</div>
+            <div class="what">Brand &amp; Social Media Marketing Intern</div>
+            <div class="where">Decamarx · Agoura Hills, CA</div>
+          </div>
+          <div class="entry">
+            <div class="when">Jun 2026 — Current</div>
+            <div class="what">Brand &amp; Social Media Marketing Intern</div>
+            <div class="where">PackIt · Agoura Hills, CA</div>
+          </div>
+          <div class="entry">
+            <div class="when">Jan — May 2026</div>
+            <div class="what">Campus Lead</div>
+            <div class="where">Ditto · Santa Barbara, CA</div>
+          </div>
+          <div class="entry">
+            <div class="when">Sept 2025 — Jun 2026</div>
+            <div class="what">Content Creation Intern</div>
+            <div class="where">UCSB Office of Public Affairs &amp; Communications</div>
+          </div>
+          <div class="entry">
+            <div class="when">Jun — Aug 2025</div>
+            <div class="what">Content &amp; Curriculum Intern</div>
+            <div class="where">Intellect · Singapore</div>
+          </div>
+          <div class="entry">
+            <div class="when">Oct 2024 — Apr 2025</div>
+            <div class="what">Social Media + Campus Ambassador</div>
+            <div class="where">Liner · Santa Barbara, CA</div>
+          </div>
+          <div class="entry">
+            <div class="when">Aug — Dec 2024</div>
+            <div class="what">Social Media Marketing Intern</div>
+            <div class="where">Fizz · New York City, NY</div>
+          </div>
+          <div class="entry">
+            <div class="when">Jun — Dec 2025</div>
+            <div class="what">VP of Marketing</div>
+            <div class="where">Delta Sigma Pi, Rho Sigma Chapter</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="res-col">
+        <h3 class="res-heading">interests</h3>
+        <div class="pill-stack">
+          <span class="pill">Letter Creation</span>
+          <span class="pill">Stationery</span>
+          <span class="pill">Figurines</span>
+          <span class="pill">Weightlifting</span>
+          <span class="pill">Running</span>
+        </div>
+
+        <h3 class="res-heading" style="margin-top: 3rem;">strengths</h3>
+        <div class="pill-stack">
+          <span class="pill">Trend-driven</span>
+          <span class="pill">Detail-oriented</span>
+          <span class="pill">Collaborative</span>
+          <span class="pill">Adaptive</span>
+          <span class="pill">Strategic</span>
+        </div>
+      </div>
+
+      <div class="res-col">
+        <h3 class="res-heading">software</h3>
+        <div class="sub-heading">— Design</div>
+        <div class="software-grid">
+          <div class="sw-tile"><div class="abbr">Cv</div><div class="name">Canva</div></div>
+          <div class="sw-tile"><div class="abbr">Fg</div><div class="name">Figma</div></div>
+          <div class="sw-tile"><div class="abbr">Ps</div><div class="name">Photoshop</div></div>
+          <div class="sw-tile"><div class="abbr">Ai</div><div class="name">Illustrator</div></div>
+          <div class="sw-tile"><div class="abbr">Fc</div><div class="name">Final Cut</div></div>
+          <div class="sw-tile"><div class="abbr">Cc</div><div class="name">CapCut</div></div>
+          <div class="sw-tile"><div class="abbr">Py</div><div class="name">Python</div></div>
+          <div class="sw-tile"><div class="abbr">Lt</div><div class="name">Later</div></div>
+        </div>
+
+        <div class="sub-heading">— Productivity</div>
+        <div class="software-grid">
+          <div class="sw-tile"><div class="abbr">Gs</div><div class="name">Google Suite</div></div>
+          <div class="sw-tile"><div class="abbr">Ms</div><div class="name">MS Office</div></div>
+          <div class="sw-tile"><div class="abbr">Nt</div><div class="name">Notion</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== DIGITAL MEDIA TABS ========== -->
+<section class="section section-divider" id="digital">
   <div class="section-label mono">
-    <span class="num">[01]</span>
+    <span class="num">[02]</span>
     <span class="dash"></span>
-    <span>About</span>
+    <span>Digital Media</span>
+  </div>
+  <h2 class="section-heading">
+    Social <span class="italic">in motion</span>
+  </h2>
+  <p class="section-intro">
+    Short-form content, campaign visuals, and trend-driven storytelling.
+    Each tab below opens a different role — click through to see the project,
+    role, and impact.
+  </p>
+
+  <div class="tabs" id="social-tabs">
+    <button class="tab active" data-target="social-packit">
+      <span class="tab-num">01</span>PackIt
+    </button>
+    <button class="tab" data-target="social-1">
+      <span class="tab-num">02</span>UCSB Public Affairs
+    </button>
+    <button class="tab" data-target="social-5">
+      <span class="tab-num">03</span>Intellect
+    </button>
+    <button class="tab" data-target="social-4">
+      <span class="tab-num">04</span>Delta Sigma Pi
+    </button>
+    <button class="tab" data-target="social-2">
+      <span class="tab-num">05</span>Liner
+    </button>
+    <button class="tab" data-target="social-3">
+      <span class="tab-num">06</span>Fizz
+    </button>
   </div>
 
-  <!-- =========================================
-       ★ INTRO WITH HEADSHOT
-       Swap the headshot image URL below for your own.
-       Upload to your repo in /images/ and use src="images/me.jpg"
-       ========================================= -->
-  <div class="about-intro">
+  <div class="panels" id="social-panels">
 
-    <div class="headshot">
-      <div class="photo-wrap">
-        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=600" alt="Your headshot">
-      </div>
-      <!-- ★ Edit the handwritten-style caption text here -->
-      <div class="polaroid-caption">— hi, i'm me.</div>
-    </div>
+    <div class="panel active" id="social-packit">
+      <div class="packit-panel-grid">
 
-    <p class="about-text">
-      I think of design as a kind of <span class="accent">deep dive</span> — swimming past
-      the obvious, past the first good idea, to whatever is quieter and stranger and
-      <span class="coral">truer</span> underneath. The surface rarely tells you the whole story.
-    </p>
-
-  </div>
-
-  <!-- =====================================================
-       ★ RESUME GRID — Education / Languages+Traits / Software
-       ===================================================== -->
-  <div class="resume-grid">
-
-    <!-- EDUCATION + EXPERIENCE -->
-    <div class="res-col">
-      <h3 class="res-heading">education</h3>
-      <div>
-        <!-- ★ Copy this block to add another entry -->
-        <div class="entry">
-          <div class="when">2023 — Present</div>
-          <div class="what">B.A. Arts & Design</div>
-          <div class="where">University of California, Santa Barbara</div>
+        <div class="social-info">
+          <div class="social-eyebrow">— Jun 2026 · Current</div>
+          <h3>Pack<span class="italic">It</span></h3>
+          <p class="social-tagline">
+            Brand &amp; social media marketing for a lifestyle cooler brand —
+            building content that reaches everyday adventurers and busy families
+            across TikTok, Instagram, and Pinterest.
+          </p>
+          <div class="social-meta">
+            <div class="social-meta-item">
+              <div class="label">Role</div>
+              <div class="value">Brand &amp; SMM Intern</div>
+            </div>
+            <div class="social-meta-item">
+              <div class="label">Location</div>
+              <div class="value">Agoura Hills, CA</div>
+            </div>
+            <div class="social-meta-item">
+              <div class="label">Platforms</div>
+              <div class="value">TikTok · Instagram · Pinterest</div>
+            </div>
+            <div class="social-meta-item">
+              <div class="label">Focus</div>
+              <div class="value">Brand engagement</div>
+            </div>
+          </div>
+          <p class="social-description">
+            ★ Add a real description of the PackIt work — what kinds of content
+            you're producing, how you're supporting the brand's social presence,
+            campaigns you've led, and any results or wins so far. 2–4 sentences.
+          </p>
+          <div class="social-tools">
+            <span class="pill">Canva</span>
+            <span class="pill">Later</span>
+            <span class="pill">CapCut</span>
+          </div>
         </div>
 
-        <div class="entry">
-          <div class="when">2020 — 2023</div>
-          <div class="what">Multimedia Diploma</div>
-          <div class="where">Your High School Name</div>
+        <!-- Multi-platform mockup grid: phones (TikTok + IG) left, Pinterest browser right -->
+        <div class="packit-platforms">
+
+          <!-- Left column: two phones side-by-side for TikTok + IG -->
+          <div class="packit-phones">
+            <div class="packit-phone-wrap">
+              <div class="social-phone">
+                <!-- ★ Replace with PackIt TikTok screenshot -->
+                <img src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=500" alt="PackIt TikTok content">
+              </div>
+              <div class="packit-phone-label">TikTok</div>
+            </div>
+            <div class="packit-phone-wrap">
+              <div class="social-phone">
+                <!-- ★ Replace with PackIt Instagram screenshot -->
+                <img src="https://images.unsplash.com/photo-1611605698335-8b1569810432?w=500" alt="PackIt Instagram content">
+              </div>
+              <div class="packit-phone-label">Instagram</div>
+            </div>
+          </div>
+
+          <!-- Right column: browser mockup for Pinterest -->
+          <div class="packit-browser-wrap">
+            <div class="packit-browser">
+              <div class="packit-browser-bar">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="url">pinterest.com/packitcool</span>
+              </div>
+              <div class="packit-browser-content">
+                <!-- ★ Replace with PackIt Pinterest board screenshot -->
+                <img src="https://images.unsplash.com/photo-1587613864521-9ef8dfe617cc?w=800" alt="PackIt Pinterest board">
+              </div>
+            </div>
+            <div class="packit-phone-label">Pinterest</div>
+          </div>
+
         </div>
-      </div>
 
-      <h3 class="res-heading" style="margin-top: 3rem;">experience</h3>
-      <div>
-        <div class="entry">
-          <div class="when">2024 — Present</div>
-          <div class="what">Freelance Graphic Designer</div>
-          <div class="where">Brand identities, social campaigns, editorial</div>
-        </div>
-
-        <div class="entry">
-          <div class="when">Summer 2024 (3 mo.)</div>
-          <div class="what">Graphic Design Intern</div>
-          <div class="where">Studio Name, City</div>
-        </div>
-
-        <div class="entry">
-          <div class="when">2023 — 2024</div>
-          <div class="what">Creative Media Lead</div>
-          <div class="where">Student Design Collective, UCSB</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- LANGUAGES + TRAITS -->
-    <div class="res-col">
-      <h3 class="res-heading">languages</h3>
-
-      <div class="pill-row">
-        <span class="pill">English</span>
-        <span class="pill">Spanish</span>
-      </div>
-      <div class="pill-row">
-        <span class="pill">Conversational French</span>
-      </div>
-
-      <h3 class="res-heading" style="margin-top: 3rem;">traits</h3>
-
-      <div class="pill-stack">
-        <span class="pill">INFP</span>
-        <span class="pill">Adaptive</span>
-        <span class="pill">Willing to learn</span>
-        <span class="pill">Collaborative</span>
-        <span class="pill">Detail-oriented</span>
       </div>
     </div>
 
-    <!-- SOFTWARE -->
-    <div class="res-col">
-      <h3 class="res-heading">software</h3>
-
-      <div class="sub-heading">— Adobe</div>
-      <div class="software-grid">
-        <div class="sw-tile"><div class="abbr">Ps</div><div class="name">Photoshop</div></div>
-        <div class="sw-tile"><div class="abbr">Ai</div><div class="name">Illustrator</div></div>
-        <div class="sw-tile"><div class="abbr">Id</div><div class="name">InDesign</div></div>
-        <div class="sw-tile"><div class="abbr">Ae</div><div class="name">After FX</div></div>
-        <div class="sw-tile"><div class="abbr">Pr</div><div class="name">Premiere</div></div>
-        <div class="sw-tile"><div class="abbr">Lr</div><div class="name">Lightroom</div></div>
+    <div class="panel" id="social-1">
+      <div class="social-panel-grid">
+        <div class="social-phone">
+          <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600" alt="UCSB content">
+        </div>
+        <div class="social-info">
+          <div class="social-eyebrow">— Sept 2025 · Jun 2026</div>
+          <h3>UCSB <span class="italic">Public Affairs</span></h3>
+          <p class="social-tagline">
+            Telling UCSB's story through trend-driven multimedia content
+            for a campus of 36,000+ students.
+          </p>
+          <div class="social-meta">
+            <div class="social-meta-item">
+              <div class="label">Role</div>
+              <div class="value">Content Creation Intern</div>
+            </div>
+            <div class="social-meta-item">
+              <div class="label">Location</div>
+              <div class="value">Santa Barbara, CA</div>
+            </div>
+            <div class="social-meta-item">
+              <div class="label">Platforms</div>
+              <div class="value">Instagram · TikTok</div>
+            </div>
+            <div class="social-meta-item">
+              <div class="label">Type</div>
+              <div class="value">Multimedia content</div>
+            </div>
+          </div>
+          <p class="social-description">
+            Producing and editing multimedia content aligned with current digital trends to enhance
+            UCSB's storytelling. I manage, schedule, and optimize social media assets using
+            trend-driven strategies that boost visibility, and collaborate in bi-weekly meetings
+            to brainstorm new ways to engage and impact 36,000+ students across campus.
+          </p>
+          <div class="social-tools">
+            <span class="pill">Canva</span>
+            <span class="pill">CapCut</span>
+            <span class="pill">Trend Research</span>
+          </div>
+          <div class="social-stat-row">
+            <div class="social-stat">
+              <div class="number">36k+</div>
+              <div class="desc">Student reach</div>
+            </div>
+            <div class="social-stat">
+              <div class="number">Bi-weekly</div>
+              <div class="desc">Strategy meetings</div>
+            </div>
+          </div>
+        </div>
       </div>
+    </div>
 
-      <div class="sub-heading">— Design & Web</div>
-      <div class="software-grid">
-        <div class="sw-tile"><div class="abbr">Fg</div><div class="name">Figma</div></div>
-        <div class="sw-tile"><div class="abbr">Cv</div><div class="name">Canva</div></div>
-        <div class="sw-tile"><div class="abbr">Sq</div><div class="name">Squarespace</div></div>
+    <div class="panel" id="social-2">
+      <div class="social-panel-grid">
+        <div class="social-phone">
+          <img src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=600" alt="Liner content">
+        </div>
+        <div class="social-info">
+          <div class="social-eyebrow">— Oct 2024 · Apr 2025</div>
+          <h3>Liner <span class="italic">social</span></h3>
+          <p class="social-tagline">
+            Short-form promotional content that drove a 78.5% engagement growth
+            and 180k unique interactions.
+          </p>
+          <div class="social-meta">
+            <div class="social-meta-item">
+              <div class="label">Role</div>
+              <div class="value">Social Media Team Member</div>
+            </div>
+            <div class="social-meta-item">
+              <div class="label">Location</div>
+              <div class="value">Santa Barbara, CA</div>
+            </div>
+            <div class="social-meta-item">
+              <div class="label">Tenure</div>
+              <div class="value">7 months</div>
+            </div>
+            <div class="social-meta-item">
+              <div class="label">Platforms</div>
+              <div class="value">All major platforms</div>
+            </div>
+          </div>
+          <p class="social-description">
+            Curated engaging promotional short-form content that generated 180k unique interactions
+            and a 78.5% increase in engagement. Brainstormed with team members to establish a
+            strong social media presence aligned with company values, and implemented innovative
+            campaigns that boosted brand visibility across all platforms.
+          </p>
+          <div class="social-tools">
+            <span class="pill">Canva</span>
+            <span class="pill">CapCut</span>
+            <span class="pill">Brand Strategy</span>
+          </div>
+          <div class="social-stat-row">
+            <div class="social-stat">
+              <div class="number">180k</div>
+              <div class="desc">Unique interactions</div>
+            </div>
+            <div class="social-stat">
+              <div class="number">+78.5%</div>
+              <div class="desc">Engagement growth</div>
+            </div>
+          </div>
+        </div>
       </div>
+    </div>
 
-      <div class="sub-heading">— Other</div>
-      <div class="software-grid">
-        <div class="sw-tile"><div class="abbr">Pc</div><div class="name">Procreate</div></div>
-        <div class="sw-tile"><div class="abbr">Bl</div><div class="name">Blender</div></div>
-        <div class="sw-tile"><div class="abbr">Cc</div><div class="name">CapCut</div></div>
+    <div class="panel" id="social-3">
+      <div class="social-panel-grid">
+        <div class="social-phone">
+          <img src="https://images.unsplash.com/photo-1587613864521-9ef8dfe617cc?w=600" alt="Fizz content">
+        </div>
+        <div class="social-info">
+          <div class="social-eyebrow">— Aug 2024 · Dec 2024</div>
+          <h3>Fizz <span class="italic">NYC</span></h3>
+          <p class="social-tagline">
+            Producing high-quality video content to promote financial literacy
+            across multiple social platforms.
+          </p>
+          <div class="social-meta">
+            <div class="social-meta-item">
+              <div class="label">Role</div>
+              <div class="value">Social Media Marketing Intern</div>
+            </div>
+            <div class="social-meta-item">
+              <div class="label">Location</div>
+              <div class="value">New York City, NY</div>
+            </div>
+            <div class="social-meta-item">
+              <div class="label">Tenure</div>
+              <div class="value">5 months</div>
+            </div>
+            <div class="social-meta-item">
+              <div class="label">Focus</div>
+              <div class="value">Financial literacy content</div>
+            </div>
+          </div>
+          <p class="social-description">
+            Conceptualized, planned, and produced high-quality video content for various social media
+            platforms. Collaborated in marketing meetings, contributing creative insights and ideas
+            for engaging content concepts. Stayed current with digital media trends, best practices,
+            and emerging technologies to promote financial literacy in approachable ways.
+          </p>
+          <div class="social-tools">
+            <span class="pill">Video Production</span>
+            <span class="pill">Trend Research</span>
+            <span class="pill">Canva</span>
+          </div>
+          <div class="social-stat-row">
+            <div class="social-stat">
+              <div class="number">Multi</div>
+              <div class="desc">Platform launch</div>
+            </div>
+            <div class="social-stat">
+              <div class="number">5 mo.</div>
+              <div class="desc">Internship</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel" id="social-4">
+      <div class="social-panel-grid">
+        <div class="social-phone">
+          <img src="https://images.unsplash.com/photo-1611605698335-8b1569810432?w=600" alt="Delta Sigma Pi content">
+        </div>
+        <div class="social-info">
+          <div class="social-eyebrow">— Jun 2025 · Dec 2025</div>
+          <h3>Delta <span class="italic">Sig Pi</span></h3>
+          <p class="social-tagline">
+            Recruitment campaigns and themed event visuals averaging 12k impressions
+            for the Rho Sigma Chapter.
+          </p>
+          <div class="social-meta">
+            <div class="social-meta-item">
+              <div class="label">Role</div>
+              <div class="value">VP of Marketing</div>
+            </div>
+            <div class="social-meta-item">
+              <div class="label">Chapter</div>
+              <div class="value">Rho Sigma · UCSB</div>
+            </div>
+            <div class="social-meta-item">
+              <div class="label">Tenure</div>
+              <div class="value">7 months</div>
+            </div>
+            <div class="social-meta-item">
+              <div class="label">Platforms</div>
+              <div class="value">Instagram · TikTok</div>
+            </div>
+          </div>
+          <p class="social-description">
+            Designed and executed multimedia recruitment campaigns including digital assets
+            and event visuals. Led all recruitment marketing initiatives by curating tailored
+            themed posts that highlighted chapter values, and averaged 12,000 impressions
+            across all marketing campaigns on high-interactive platforms.
+          </p>
+          <div class="social-tools">
+            <span class="pill">Canva</span>
+            <span class="pill">Photoshop</span>
+            <span class="pill">Visual Identity</span>
+          </div>
+          <div class="social-stat-row">
+            <div class="social-stat">
+              <div class="number">12k</div>
+              <div class="desc">Avg. impressions</div>
+            </div>
+            <div class="social-stat">
+              <div class="number">All</div>
+              <div class="desc">Recruitment cycles</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel" id="social-5">
+      <div class="social-panel-grid">
+        <div class="social-phone">
+          <img src="https://images.unsplash.com/photo-1545665277-5937489579f2?w=600" alt="Intellect content">
+        </div>
+        <div class="social-info">
+          <div class="social-eyebrow">— Jun 2025 · Aug 2025</div>
+          <h3>Intellect <span class="italic">Singapore</span></h3>
+          <p class="social-tagline">
+            Building CBT resources and curated content modules that drove
+            client demos and contract growth.
+          </p>
+          <div class="social-meta">
+            <div class="social-meta-item">
+              <div class="label">Role</div>
+              <div class="value">Content & Curriculum Intern</div>
+            </div>
+            <div class="social-meta-item">
+              <div class="label">Location</div>
+              <div class="value">Singapore</div>
+            </div>
+            <div class="social-meta-item">
+              <div class="label">Tenure</div>
+              <div class="value">3 months</div>
+            </div>
+            <div class="social-meta-item">
+              <div class="label">Type</div>
+              <div class="value">Content Strategy</div>
+            </div>
+          </div>
+          <p class="social-description">
+            Developed 20+ CBT resources and 4 tailored modules driving competency and $300K+
+            in potential contracts. Audited and optimized underperforming content to improve
+            retention, client credibility, and RFP rates. Delivered special projects including
+            curated collections, an emergency worksheet, and a $100K+ client demo.
+          </p>
+          <div class="social-tools">
+            <span class="pill">Content Strategy</span>
+            <span class="pill">Curriculum Design</span>
+            <span class="pill">Client Work</span>
+          </div>
+          <div class="social-stat-row">
+            <div class="social-stat">
+              <div class="number">$300k+</div>
+              <div class="desc">Potential contracts</div>
+            </div>
+            <div class="social-stat">
+              <div class="number">20+</div>
+              <div class="desc">CBT resources built</div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
   </div>
 </section>
 
-<!-- =====================================================
-     ★ WORK GRID
-     ===================================================== -->
-<section class="work" id="work">
-  <div class="work-header">
-    <div class="section-label mono">
-      <span class="num">[02]</span>
-      <span class="dash"></span>
-      <span>Selected Works</span>
-    </div>
-    <h2>Things pulled<br><span class="italic">from the depths</span>.</h2>
+<!-- ========== UX TABS ========== -->
+<section class="section section-divider" id="ux">
+  <div class="section-label mono">
+    <span class="num">[03]</span>
+    <span class="dash"></span>
+    <span>UI / UX Design</span>
+  </div>
+  <h2 class="section-heading">
+    Side <span class="italic">projects</span>
+  </h2>
+  <p class="section-intro">
+    Three projects in the design archive — a startup product launch, a side concept,
+    and a Designathon submission. Click through the tabs below to view each one.
+  </p>
+
+  <div class="tabs" id="ux-tabs">
+    <button class="tab active" data-target="ux-1">
+      <span class="tab-num">01</span>Lights Out
+    </button>
+    <button class="tab" data-target="ux-2">
+      <span class="tab-num">02</span>Openly
+    </button>
+    <button class="tab" data-target="ux-3">
+      <span class="tab-num">03</span>Pantrify
+    </button>
   </div>
 
-  <div class="work-grid">
+  <div class="panels" id="ux-panels">
 
-    <a href="#" class="card">
-      <img src="https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=700" alt="">
-      <span class="meta">01 · 2025</span>
-      <div class="title-overlay">
-        <h3>FILMS &amp; TV</h3>
-        <p>year in review</p>
-      </div>
-    </a>
+    <!-- ============= UX 01: LIGHTS OUT ============= -->
+    <div class="panel active" id="ux-1">
+      <div class="ux-panel-grid">
+        <div class="ux-info">
+          <div class="ux-eyebrow">— AE Startup Project</div>
+          <h3>Lights <span class="italic">Out</span></h3>
+          <p class="ux-tagline">
+            L!GHTS OUT, a product designed for YOU. Launching a product that
+            enables sleep at your schedule, anywhere at any time.
+          </p>
+          <div class="ux-meta">
+            <div class="ux-meta-item">
+              <div class="label">Role</div>
+              <div class="value">UI / UX Designer</div>
+            </div>
+            <div class="ux-meta-item">
+              <div class="label">Type</div>
+              <div class="value">Startup Project</div>
+            </div>
+            <div class="ux-meta-item">
+              <div class="label">Status</div>
+              <div class="value">Completed</div>
+            </div>
+          </div>
+          <p class="ux-description">
+            Lights Out's flagship product, the SOL BLOCK, is engineered around
+            real sleep needs — built for travelers crossing time zones and shift
+            workers fighting the daylight. Unlike standard blackout curtains
+            that depend on a fixed installation, SOL BLOCK is portable,
+            lightweight, and designed for tool-free setup. Its higher-grade
+            light-blocking material outperforms competitors on the shelf,
+            delivering true darkness in any environment so users can sleep on
+            their schedule, not the sun's.
+          </p>
+          <div class="ux-tools">
+            <span class="pill">Figma</span>
+            <span class="pill">Brand Design</span>
+            <span class="pill">E-commerce UI</span>
+            <span class="pill">Startup</span>
+          </div>
+          <a href="https://www.figma.com/design/mUbs3tc9T1FxtHdUSXCvlQ/AE-Startup---L-GHTS-OUT?node-id=0-1" target="_blank" rel="noopener" class="ux-link">View Figma file →</a>
+        </div>
 
-    <a href="#" class="card">
-      <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=700" alt="">
-      <span class="meta">02 · 2025</span>
-      <div class="title-overlay">
-        <h3>PHOTO ESSAY</h3>
-        <p>issue nine</p>
+        <div class="ux-visual">
+          <div class="browser-frame">
+            <div class="browser-bar">
+              <span class="browser-dot"></span>
+              <span class="browser-dot"></span>
+              <span class="browser-dot"></span>
+              <span class="url">lightsout.com — Landing Page</span>
+            </div>
+            <div class="browser-content">
+              <!-- Main image: hero/thumbnail composite -->
+              <img src="images/lightsout-hero.png" alt="Lights Out landing page hero with SOL BLOCK launch">
+            </div>
+          </div>
+          <div class="ux-secondary">
+            <div class="ux-secondary-img">
+              <img src="images/lightsout-pages.png" alt="Lights Out home, shopping page, and cart sidebar">
+            </div>
+            <div class="ux-secondary-img">
+              <img src="images/lightsout-thumbnail.png" alt="Lights Out thumbnail composition">
+            </div>
+          </div>
+        </div>
       </div>
-    </a>
+    </div>
 
-    <a href="#" class="card">
-      <img src="https://images.unsplash.com/photo-1439066615861-d1af74d74000?w=700" alt="">
-      <span class="meta">03 · 2025</span>
-      <div class="title-overlay">
-        <h3>HEAVEN CAN WAIT</h3>
-        <p>poster series</p>
-      </div>
-    </a>
+    <!-- ============= UX 02: OPENLY ============= -->
+    <div class="panel" id="ux-2">
+      <div class="ux-panel-grid">
+        <div class="ux-info">
+          <div class="ux-eyebrow">— Side Project</div>
+          <h3>Open<span class="italic">ly</span></h3>
+          <p class="ux-tagline">★ A short tagline describing what Openly is —
+          what does it open up, who is it for, what feeling does it create?</p>
+          <div class="ux-meta">
+            <div class="ux-meta-item">
+              <div class="label">Role</div>
+              <div class="value">★ UI / UX Designer</div>
+            </div>
+            <div class="ux-meta-item">
+              <div class="label">Type</div>
+              <div class="value">★ Mobile App / Platform</div>
+            </div>
+            <div class="ux-meta-item">
+              <div class="label">Status</div>
+              <div class="value">★ Prototype Complete</div>
+            </div>
+          </div>
+          <p class="ux-description">
+            ★ Describe Openly here — the brief, the problem, your design approach,
+            and what's interesting or distinctive about how it turned out.
+          </p>
+          <div class="ux-tools">
+            <span class="pill">Figma</span>
+            <span class="pill">Wireframing</span>
+            <span class="pill">Visual Design</span>
+          </div>
+          <a href="https://www.figma.com/proto/dTiVTrnVMsSxY20jUegVeN/Openly?node-id=89-33" target="_blank" rel="noopener" class="ux-link">View Figma prototype →</a>
+        </div>
 
-    <a href="#" class="card">
-      <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=700" alt="">
-      <span class="meta">04 · 2024</span>
-      <div class="title-overlay">
-        <h3>SEASIDE</h3>
-        <p>campaign</p>
+        <div class="ux-visual">
+          <div class="browser-frame">
+            <div class="browser-bar">
+              <span class="browser-dot"></span>
+              <span class="browser-dot"></span>
+              <span class="browser-dot"></span>
+              <span class="url">figma.com/proto/Openly</span>
+            </div>
+            <div class="browser-content">
+              <!-- ★ Replace with a screenshot of your Openly hero screen -->
+              <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=1200" alt="Openly main screen">
+            </div>
+          </div>
+          <div class="ux-secondary">
+            <div class="ux-secondary-img">
+              <img src="https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?w=600" alt="Openly detail">
+            </div>
+            <div class="ux-secondary-img">
+              <img src="https://images.unsplash.com/photo-1559028012-481c04fa702d?w=600" alt="Openly detail">
+            </div>
+          </div>
+        </div>
       </div>
-    </a>
+    </div>
 
-    <a href="#" class="card">
-      <img src="https://images.unsplash.com/photo-1505142468610-359e7d316be0?w=700" alt="">
-      <span class="meta">05 · 2024</span>
-      <div class="title-overlay">
-        <h3>MIXTAPE</h3>
-        <p>digital zine</p>
-      </div>
-    </a>
+    <!-- ============= UX 03: PANTRIFY ============= -->
+    <div class="panel" id="ux-3">
+      <div class="ux-panel-grid">
+        <div class="ux-info">
+          <div class="ux-eyebrow">— Designathon · 2024</div>
+          <h3>Pant<span class="italic">rify</span></h3>
+          <p class="ux-tagline">A pantry-management app concept built during a
+          2024 Designathon — turning fridge chaos into mealtime clarity.</p>
+          <div class="ux-meta">
+            <div class="ux-meta-item">
+              <div class="label">Role</div>
+              <div class="value">★ UX Designer</div>
+            </div>
+            <div class="ux-meta-item">
+              <div class="label">Type</div>
+              <div class="value">★ Mobile App Concept</div>
+            </div>
+            <div class="ux-meta-item">
+              <div class="label">Status</div>
+              <div class="value">★ Prototype Complete</div>
+            </div>
+          </div>
+          <p class="ux-description">
+            ★ Edit this paragraph with the real Pantrify story. Walk through the
+            problem (e.g. food waste, forgotten ingredients), your team's approach,
+            and what made your solution stand out at the Designathon. 2–4 sentences.
+          </p>
+          <div class="ux-tools">
+            <span class="pill">Figma</span>
+            <span class="pill">Designathon</span>
+            <span class="pill">Team Project</span>
+          </div>
+          <a href="https://www.figma.com/proto/Yk4lOCzFlOmGBnB1LFXX6p/Pantrify-Designathon2024?node-id=7-26&starting-point-node-id=7%3A26" target="_blank" rel="noopener" class="ux-link">View Figma prototype →</a>
+        </div>
 
-    <a href="#" class="card">
-      <img src="https://images.unsplash.com/photo-1439853949127-fa647821eba0?w=700" alt="">
-      <span class="meta">06 · 2024</span>
-      <div class="title-overlay">
-        <h3>NOTES ON BLUE</h3>
-        <p>editorial</p>
+        <div class="ux-visual">
+          <div class="browser-frame">
+            <div class="browser-bar">
+              <span class="browser-dot"></span>
+              <span class="browser-dot"></span>
+              <span class="browser-dot"></span>
+              <span class="url">figma.com/proto/Pantrify</span>
+            </div>
+            <div class="browser-content">
+              <!-- ★ Replace with a screenshot of your Pantrify hero screen -->
+              <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1200" alt="Pantrify main screen">
+            </div>
+          </div>
+          <div class="ux-secondary">
+            <div class="ux-secondary-img">
+              <img src="https://images.unsplash.com/photo-1490818387583-1baba5e638af?w=600" alt="Pantrify detail">
+            </div>
+            <div class="ux-secondary-img">
+              <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?w=600" alt="Pantrify detail">
+            </div>
+          </div>
+        </div>
       </div>
-    </a>
+    </div>
 
   </div>
 </section>
 
-<!-- =====================================================
-     ★ CONTACT
-     ===================================================== -->
+<!-- ========== BRANDS ========== -->
+<section class="section section-divider" id="brands">
+  <div class="section-label mono">
+    <span class="num">[04]</span>
+    <span class="dash"></span>
+    <span>Brand Ambassadorships</span>
+  </div>
+  <h2 class="section-heading">
+    Repping <span class="italic">in person</span>
+  </h2>
+  <p class="section-intro">
+    Tabling, partnerships, and student outreach for <em>Liner</em> and <em>Ditto</em> —
+    two startups I've represented on UCSB's campus through events, organic growth, and
+    long-term community building.
+  </p>
+
+  <div class="brands-grid">
+
+    <div class="brand-card">
+      <div class="brand-header">
+        <div class="brand-logo">ditto<span class="dot">.</span></div>
+        <span class="brand-tag">Current · Lead</span>
+      </div>
+      <div class="brand-meta">
+        <div class="brand-meta-item">
+          <div class="label">Role</div>
+          <div class="value">Campus Lead</div>
+        </div>
+        <div class="brand-meta-item">
+          <div class="label">Tenure</div>
+          <div class="value">Jan 2026 — Current</div>
+        </div>
+        <div class="brand-meta-item">
+          <div class="label">Location</div>
+          <div class="value">Santa Barbara, CA</div>
+        </div>
+      </div>
+      <div class="brand-role">Leading 15+ ambassadors on campus</div>
+      <p class="brand-description">
+        Coordinating a team of 15+ student ambassadors with weekly deliverables.
+        Building partnerships with local Santa Barbara coffee shops and community
+        events to drive organic growth, while keeping team communication strong
+        enough that company values land authentically with students.
+      </p>
+      <div class="brand-stats">
+        <div class="brand-stat">
+          <div class="number">15+</div>
+          <div class="desc">Ambassador team size</div>
+        </div>
+        <div class="brand-stat">
+          <div class="number">∞</div>
+          <div class="desc">Local partnerships</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="brand-card">
+      <div class="brand-header">
+        <div class="brand-logo">liner<span class="dot">/</span></div>
+        <span class="brand-tag">2024 — 2025</span>
+      </div>
+      <div class="brand-meta">
+        <div class="brand-meta-item">
+          <div class="label">Role</div>
+          <div class="value">Campus Ambassador + Social Team</div>
+        </div>
+        <div class="brand-meta-item">
+          <div class="label">Tenure</div>
+          <div class="value">Oct 2024 — Apr 2025</div>
+        </div>
+        <div class="brand-meta-item">
+          <div class="label">Location</div>
+          <div class="value">Santa Barbara, CA</div>
+        </div>
+      </div>
+      <div class="brand-role">Tabling, partnerships, and content</div>
+      <p class="brand-description">
+        Ran weekly tabling events on UCSB campus to engage students and drive sign-ups.
+        Worked with the Campus Lead to identify and partner with key student organizations,
+        building lasting relationships across campus. Also contributed to the social
+        media team — short-form promotional content that drove a 78.5% growth in engagement.
+      </p>
+      <div class="brand-stats">
+        <div class="brand-stat">
+          <div class="number">1,100+</div>
+          <div class="desc">UCSB sign-ups generated</div>
+        </div>
+        <div class="brand-stat">
+          <div class="number">180k</div>
+          <div class="desc">Unique interactions on social</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ========== HOBBIES ========== -->
+<section class="section section-divider" id="hobbies">
+  <div class="section-label mono">
+    <span class="num">[05]</span>
+    <span class="dash"></span>
+    <span>Hobbies &amp; Side Worlds</span>
+  </div>
+  <h2 class="section-heading">
+    Outside <span class="italic">the resume</span>
+  </h2>
+  <p class="section-intro">
+    A little of what I make outside the resume — my nail art account on Instagram,
+    where I experiment with color and detail at millimeter scale.
+  </p>
+
+  <div class="hobbies-grid">
+
+    <!-- =========================================
+         ★ NAIL ACCOUNT
+         Replace the <img src=""> with your own nail photos.
+         Upload to /images/ in your repo and link as src="images/nail-1.jpg"
+         Add or remove .nail-card divs to fit your gallery.
+         ========================================= -->
+    <div class="hobby-block">
+      <div class="hobby-block-header">
+        <h3>Nail <span class="italic">art</span></h3>
+      </div>
+      <div class="hobby-handle mono">
+        @<a href="https://instagram.com/eykistars" target="_blank" rel="noopener">eykistars</a>
+      </div>
+      <p class="hobby-blurb">
+        I run <em>eykistars</em> — a small Instagram account dedicated to nail art.
+        It's where I experiment with color, pattern, and the kind of detail that
+        only happens at the millimeter scale.
+      </p>
+
+      <div class="nail-grid">
+        <!-- ★ Replace these with your nail art photos -->
+        <div class="nail-card">
+          <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?w=600" alt="Nail design 1">
+        </div>
+        <div class="nail-card">
+          <img src="https://images.unsplash.com/photo-1610992015732-2449b76344bc?w=600" alt="Nail design 2">
+        </div>
+        <div class="nail-card">
+          <img src="https://images.unsplash.com/photo-1601612628452-9e99ced43524?w=600" alt="Nail design 3">
+        </div>
+        <div class="nail-card">
+          <img src="https://images.unsplash.com/photo-1632345031435-8727f6897d53?w=600" alt="Nail design 4">
+        </div>
+        <div class="nail-card">
+          <img src="https://images.unsplash.com/photo-1604902396830-aca29e19b067?w=600" alt="Nail design 5">
+        </div>
+        <div class="nail-card">
+          <img src="https://images.unsplash.com/photo-1607779097040-26e80aa78e66?w=600" alt="Nail design 6">
+        </div>
+      </div>
+    </div>
+
+    <!-- =========================================
+         ★ WATTPAD STORIES REMOVED
+         ========================================= -->
+
+  </div>
+</section>
+
+<!-- ========== CONTACT ========== -->
 <section class="contact" id="contact">
-  <div class="eyebrow mono">— [03] / Surface for air —</div>
+  <div class="eyebrow mono">— [06] / Get in touch —</div>
   <h2>
     Let's<br>
-    <span class="italic">make waves</span>.
+    <span class="italic">connect</span>.
   </h2>
-  <a href="mailto:hello@yourname.com" class="email">hello@yourname.com</a>
+  <a href="mailto:josilynna@ucsb.edu" class="email">josilynna@ucsb.edu</a>
   <div class="socials">
-    <a href="#">Instagram</a>
-    <a href="#">Behance</a>
-    <a href="#">TikTok</a>
-    <a href="#">Are.na</a>
-    <a href="#">LinkedIn</a>
+    <a href="mailto:josilynna@ucsb.edu" class="email-btn">✉ Email me</a>
   </div>
 </section>
 
 <footer>
-  <span>© MMXXVI — Your Name</span>
-  <span>Designed with care</span>
-  <span>v6.0 / Still waters</span>
+  <span>2026 — Josilynna Kieng</span>
 </footer>
+
+<script>
+  document.querySelectorAll('.tabs').forEach(tabGroup => {
+    const tabs = tabGroup.querySelectorAll('.tab');
+    const panelsContainer = tabGroup.nextElementSibling;
+    const panels = panelsContainer.querySelectorAll('.panel');
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        const target = tab.dataset.target;
+        tabs.forEach(t => t.classList.remove('active'));
+        panels.forEach(p => p.classList.remove('active'));
+        tab.classList.add('active');
+        document.getElementById(target).classList.add('active');
+      });
+    });
+  });
+</script>
 
 </body>
 </html>
